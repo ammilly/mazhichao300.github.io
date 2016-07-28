@@ -84,13 +84,28 @@
 
 
 
+<meta name="description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="micro_msg_pay">
+<meta property="og:title" content="H5微信支付">
 <meta property="og:url" content="http://yoursite.com/2016/07/28/micro-msg-pay/index.html">
 <meta property="og:site_name" content="Ma Zhichao's Blog">
-<meta property="og:updated_time" content="2016-07-28T11:21:30.000Z">
+<meta property="og:description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
+<meta property="og:updated_time" content="2016-07-28T12:36:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="micro_msg_pay">
+<meta name="twitter:title" content="H5微信支付">
+<meta name="twitter:description" content="我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。
+
+针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。
+微信外部浏览器方案没参与，不清楚。应该是打开某个特殊的URL调起微信
+微信内部浏览器此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对">
 
 
 
@@ -113,7 +128,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/07/28/micro-msg-pay/"/>
 
-  <title> micro_msg_pay | Ma Zhichao's Blog </title>
+  <title> H5微信支付 | Ma Zhichao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +278,7 @@
             
             
               
-                micro_msg_pay
+                H5微信支付
               
             
           </h1>
@@ -303,7 +318,16 @@
       
 
       
-        
+        <blockquote>
+<p>我们的M站接入了微信支付，虽然不是我开发的，但是过程中参与了部分的方案调研，这里把我知道的记录下来。</p>
+</blockquote>
+<h4 id="针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"><a href="#针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。" class="headerlink" title="针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"></a>针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。</h4><ol>
+<li>微信外部浏览器<br>方案没参与，不清楚。应该是打开某个特殊的URL调起微信</li>
+<li>微信内部浏览器<br>此时不能使用方案1，因为已经是在微信内部了，不能再调起微信。这时可以走微信内部公众号的方式，用openid调用微信支付接口，用户，公众号的对应关系为一个Openid。现在的问题就是如何获取openid了。微信提供了oauth授权接口，只需要openid的话，还可以做到静默授权，用户无感知。授权后拿到token,然后在回调里面用token即可取openid。</li>
+</ol>
+<hr>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419316505&amp;token=&amp;lang=zh_CN" target="_blank" rel="external">微信支付官方文档</a></p>
+
       
     </div>
 
@@ -448,7 +472,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。"><span class="nav-number">1.</span> <span class="nav-text">针对微信内部浏览器和微信外部浏览器，调用微信支付的技术方案是不同的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
           </div>
         </section>
